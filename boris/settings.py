@@ -73,15 +73,21 @@ WSGI_APPLICATION = 'boris.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
+# ova podesavanja su ok radila
+# DATABASES = {
+#   'default': dj_database_url.config(
+#        default='postgres://ruvim:XOP6xCLOmXZR0AmEF4Mk9ndlWozhYBoI@dpg-chsrsd9mbg57s5t6msgg-a.frankfurt-postgres.render.com/ruvim_site',
+#        conn_max_age=600,
+#        conn_health_checks=True,
+#    )
+# }
 DATABASES = {
-    'default': dj_database_url.config(
-        default='postgres://ruvim:XOP6xCLOmXZR0AmEF4Mk9ndlWozhYBoI@dpg-chsrsd9mbg57s5t6msgg-a.frankfurt-postgres.render.com/ruvim_site',
+    'default': dj_database_url.parse(
+        'postgres://ruvim:XOP6xCLOmXZR0AmEF4Mk9ndlWozhYBoI@dpg-chsrsd9mbg57s5t6msgg-a.frankfurt-postgres.render.com/ruvim_site',
         conn_max_age=600,
         conn_health_checks=True,
     )
 }
-
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
